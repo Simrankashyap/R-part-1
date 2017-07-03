@@ -1,0 +1,14 @@
+factor<-function(n)
+{
+  print(1)
+  print(n)
+  m=n%/%2
+  while(m)
+  {
+    if(n%%m==0)
+    {
+      print(m)
+    }
+    m=m-1
+  }
+}  
