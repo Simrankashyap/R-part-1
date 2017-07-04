@@ -1,0 +1,592 @@
+
+ASSIGNMENT 1
+
+1. SCIENTIFIC CALCULATOR
+
+  a=scan()
+  b=scan()
+  c=scan(what="character")
+  switch(c,"+"=print(a+b),"-"=print(a-b),"*"=print(a*b),"/"=print(a/b))
+
+  OUTPUT
+
+ > source('~/sci.R')
+1: 1
+2: 
+Read 1 item
+1: 2
+2: 
+Read 1 item
+1: *
+2: 
+Read 1 item
+[1] 2
+
+2. PATTERNS
+(a)
+for(i in 1:3)
+{for(j in 3:i)
+{ cat(" ")}
+  for(p in 1:i)
+  {cat(p)}
+  for(l in i-1:i)
+  {
+    if(l==0)
+      cat(" ")
+    else cat(l) }
+  cat("\n")
+}
+
+OUTPUT
+   1 
+  121 
+ 12321 
+
+(b)
+for(i in 1:5)
+{for(j in 1:i){
+  
+  cat("*")
+}
+  cat("\n")
+}
+
+OUTPUT
+*
+**
+***
+****
+*****
+
+3. FACTORIAL
+
+ n=scan()
+ans<-1
+  
+for(i in 1:n){
+  ans=ans*i
+}
+print(ans)
+
+OUTPUT
+> source('~/fact.R')
+1: 4
+2: 
+Read 1 item
+[1] 24
+
+4.FIBONACCI
+
+n=scan()
+a<-0
+b<-1
+print(0)
+print(1)
+if(n==2)
+{ print("fibonacii series printed" )}else{
+for(i in 0:(n-2) ){
+  c=a+b
+  print(c)
+  a<-b
+  b<-c
+}
+}
+OUTPUT
+> source('~/fibonacci.R')
+1: 3
+2: 
+Read 1 item
+[1] 0
+[1] 1
+[1] 1
+
+
+5. PRIME
+(a)
+  n=scan()
+flag=0
+print(2)
+for(i in 2:n){
+for(j in 2:(i-1)){
+  if((i%%j)==0)
+  {flag=0
+   break}
+  else{ flag=1}
+}
+if(flag==1) print(i)}
+
+OUTPUT
+> source('~/primea.R')
+1: 5
+2: 
+Read 1 item
+[1] 2
+[1] 3
+[1] 5
+
+(b)
+count=1
+flag=0
+print(2)
+for(i in 2:100){
+      for(j in 2:(i-1)){
+        if((i%%j)==0) {
+          flag=0
+          break
+        }
+        else{flag=1}
+      }
+      if(flag==1)
+        {count<-count+1
+           if(count<=5){ print(i)}
+    }
+    }
+
+OUTPUT
+> source('~/primeb.R')
+[1] 2
+[1] 3
+[1] 5
+[1] 7
+[1] 11
+
+(c)
+count=1
+flag=0
+print(2)
+for(i in 2:100){
+      for(j in 2:(i-1)){
+        if((i%%j)==0) {
+          flag=0
+          break
+        }
+        else{flag=1}
+      }
+      if(flag==1)
+        {count<-count+1
+      if(count==6){ }
+          else{ print(i)}
+    }
+    }
+
+OUTPUT
+
+> source('~/num.R')
+[1] 2
+[1] 3
+[1] 5
+[1] 7
+[1] 11
+[1] 17
+[1] 19
+[1] 23
+[1] 29
+[1] 31
+[1] 37
+[1] 41
+[1] 43
+[1] 47
+[1] 53
+[1] 59
+[1] 61
+[1] 67
+[1] 71
+[1] 73
+[1] 79
+[1] 83
+[1] 89
+[1] 97
+
+ASS2:-
+> x=c(4,6,5,7,10,9,4,15)
+> x<7
+[1]  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE FALSE
+
+
+> p=c(3,5,6,8)
+> q=c(3,3,3)
+> p+q
+[1]  6  8  9 11
+
+
+> age=c(22,25,18,20)
+> name=c("james","mathew","olivia","stella")
+> gender=c("M","M","F","F")
+> df=data.frame(age,name,gender)
+> df[1:2,]
+
+  age   name gender
+1  22  james      M
+2  25 mathew      M
+
+ z=0:9
+> digits=as.character(z)
+> as.integer(digits)
+ [1] 0 1 2 3 4 5 6 7 8 9
+
+x=c(1,2,3,4)
+> (x+2)[(!is.na(x))&x>0)]=k
+k
+
+[1] 3 4 5 6
+
+> x=c(2,4,6,8)
+> y=c(TRUE,TRUE,FALSE,TRUE)
+> sum(x[y])
+[1] 14
+
+> x=c(34,56,55,87,NA,4,77,NA,21,NA,39)
+> length(which(is.na(x)))
+[1] 3
+
+> x=c(4,6,5,7,10,9,4,15)
+> y=c(0,10,1,8,2,3,4,1)
+> x*y
+[1]  0 60  5 56 20 27 16 15
+
+> a=c(1,5,4,3,6)
+> b=c(3,5,2,1,9)
+> a<=b
+[1]  TRUE  TRUE FALSE FALSE  TRUE
+
+> a=c(10,2,4,15)
+> b=c(3,12,4,11)
+> rbind(a,b)
+  [,1] [,2] [,3] [,4]
+a   10    2    4   15
+b    3   12    4   11
+
+> x=c(1:12)
+> length(x)
+[1] 12
+
+> a=c(12:5)
+> is.numeric(a)
+[1] TRUE
+
+> x=letters[1:10]
+> y=letters[15:24]
+> x<y
+ [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+
+> x=c('blue','red','green','yellow')
+> is.character(x)
+[1] TRUE
+
+> x=('blue',10,'green',20)
+> is.character(x)
+[1] TRUE
+
+> a=c(0.1,0.6,33.8,1.9,9.6,4.3,33.7,0.3,0.0,0.1)
+> mean(a)
+[1] 8.44
+> sd(a)
+[1] 13.66473
+>
+> cumsum(a)
+ [1]  0.1  0.7 34.5 36.4 46.0 50.3 84.0 84.3 84.3 84.4
+
+> max(a)
+[1] 33.8
+
+ASS3:-
+
+
+ bufftall=c(10,1,37,5,12)
+ gardenbee=c(8,3,19,6,4)
+ redtall=c(18,9,1,2,4)
+ honeybee = c(12,13,16,9,10)
+ c=c(8,27,6,32,23)
+df=data.frame(bufftall,gardentree,redtall,honeybee,c)
+df
+  bufftall gardenbee redtall honeybee  c
+1       10         8      18       12  8
+2        1         3       9       13 27
+3       37        19       1       16  6
+4        5         6       2        9 32
+
+> values=c("thistle","vipers bugloss","golden rain","yellow","blackberry")
+> row.names(bee)<-values
+> bee
+                b  g  r  h  c
+thistle        10  8 18 12  8
+vipers bugloss  1  3  9 13 27
+golden rain    37 19  1 16  6
+yellow          5  6  2  9 32
+blackberry     12  4  4 10 23
+
+> data.matrix(bee)
+       b  g  r  h  c
+[1,] 10  8 18 12  8
+[2,]  1  3  9 13 27
+[3,] 37 19  1 16  6
+[4,]  5  6  2  9 32
+[5,] 12  4  4 10 23
+
+> x=list(b,g,r,h,c)
+> x
+[[1]]
+[1] 10  1 37  5 12
+
+[[2]]
+[1]  8  3 19  6  4
+
+[[3]]
+[1] 18  9  1  2  4
+
+[[4]]
+[1] 12 13 16  9 10
+
+[[5]]
+[1]  8 27  6 32 23
+
+> bee[,5]
+            b g r  h  c
+blackberry 8 27 6 32 23
+
+> bee[,3:4]
+             b  g r  h  c
+golden rain 18 9 1 2 4
+yellow       12 13 16 9 10
+
+> bee[,3]
+[1] 18  9  1  2  4
+
+> order(r,decreasing=TRUE)
+[1] 1 2 5 4 3
+
+> order(g,decreasing=TRUE)
+[1] 3 1 4 5 2
+
+> bee[with(bee,order(r,decreasing=TRUE)),]
+                b  g  r  h  c
+thistle        10  8 18 12  8
+vipers bugloss  1  3  9 13 27
+blackberry     12  4  4 10 23
+yellow          5  6  2  9 32
+golden rain    37 19  1 16  6
+
+(b)
+ 
+i=order(bee[1,])
+bee1=bee[,i]
+
+************
+1.add<-function(x,y){
+  result=x+y
+  result=result/2
+  result
+}
+> source('~/.active-rstudio-document')
+> add(2,2)
+[1] 2
+
+2.firsttwochar <-function(y)
+{
+  return(substr(y,1,2))
+}
+> source('~/assignment4.R')
+> firsttwochar("sanchita")
+[1] "sa"
+
+3.missing <- function(x)
+{
+  (which(is.na(x)))
+}
+
+ x=c(1,2,NA,4)
+> missing(x)
+[1] 3
+
+4.getage <- function(age)
+{
+  if(age<18){
+    print("Not eligible to vote")
+  }else{
+    print("eligible to vote")
+  }
+}
+
+> source('~/assignment4.R')
+> getage(20)
+[1] "eligible to vote"
+
+5.leapyear <- function(year)
+{
+  if(year%%4==0)
+  {
+  
+  if((year%%100)==0)
+  { if((year%%400)==0)
+  { print("leap year")}
+  else{
+    print("Not a leap year")
+  }
+  }else{
+    print("leap year")
+  }
+}else{
+  print("Not a leap year")
+}
+}
+> source('~/assignment4.R')
+> leapyear(1700)
+[1] "Not a leap year"
+
+6.add<-function(x,y){ (x+y)}
+sub<-function(x,y){(x-y)}
+mul<-function(x,y){(x*y)}
+divide<-function(x,y){(x/y)}
+calc <- function(x,y,z)
+{
+  switch(z,"+"=add(x,y),"-"=sub(x,y),"*"=mul(x,y),"/"=divide(x,y))
+}
+> calc(2,4,"+")
+[1] 6
+
+7.prime<-function(n)
+{
+flag=0
+print(2)
+for(i in 2:n){
+  for(j in 2:(i-1)){
+    if((i%%j)==0)
+    {flag=0
+    break}
+    else{ flag=1}
+  }
+  if(flag==1) print(i)}
+}
+> prime(10)
+[1] 2
+[1] 3
+[1] 5
+[1] 7
+
+
+8.fact<-function(n)
+{
+ans<-1
+if(n==0)
+  {return (1)}
+else{
+  return(n*fact(n-1))
+}
+print(ans)
+}
+> source('~/.active-rstudio-document')
+> fact(3)
+[1] 6
+
+
+9.fibonacii<-function(n)
+{
+a<-0
+b<-1
+print(0)
+print(1)
+if(n==2)
+{ print("fibonacii series printed" )}else{
+  for(i in 0:(n-2) ){
+    c=a+b
+    return(c)
+    a<-b
+    b<-c
+  }
+}
+}
+> fibonacii(3)
+[1] 0
+[1] 1
+[1] 1
+
+
+10.recursive.sum<-function(n)
+{
+   if(n==1)
+   { return(1)}
+  return(n+sum(n-1))
+}
+> source('~/.active-rstudio-document')
+> sum(3)
+[1] 6
+
+11.hcf<-function(a,b)
+{
+  if(a==b)
+  { return(a)}
+  if(a>b)
+  {
+    return(hcf(a-b,b))
+  }else{
+    return(hcf(a,b-a))
+  }
+}
+> source('~/aba.R')
+> hcf(10,15)
+[1] 5
+
+12.lcm<-function(a,b){
+  a*b/hcf(a,b)
+}
+> source('~/aba.R')
+> lcm(10,15)
+[1] 30
+
+13.convert<-function(n)
+{
+  ans=0
+  count=0
+  num=n
+  while(n>0)
+  {
+    r=n%%10
+    ans=ans+r*(2^count)
+    n=n%/%10
+    count=count+1
+  }
+  return(ans)
+}
+> convert(101)
+[1] 5
+
+
+14.factor<-function(n)
+{
+  print(1)
+  print(n)
+  m=n%/%2
+  while(m)
+  {
+    if(n%%m==0)
+    {
+      print(m)
+    }
+      m=m-1
+  }
+
+> factor(12)
+[1] 1
+[1] 12
+[1] 6
+[1] 4
+[1] 3
+[1] 2
+[1] 1
+
+
+15.armstrong<-function(n)
+{
+  num=n
+  sum=0
+  while(n>0)
+  {
+    r=n%%10
+    n=n%/%10
+    sum=sum+(r^3)
+  } 
+  if(sum==num)
+  { return("TRUE")
+  }else{ return("FALSE")}
+}
+  
